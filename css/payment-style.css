@@ -1,0 +1,37 @@
+﻿img {
+    width: 294px;
+    height: 224px;
+    margin-top: 124px;
+}
+
+.title {
+    font-family: 'IRAN-CELL-BOLD';
+    size: 20px;
+    color: #444444;
+    margin-bottom: 24px;
+    margin-top: 83px;
+}
+
+.description {
+    color: #808080;
+    size: 16px;
+    font-family: 'IRAN-CELL';
+    margin-bottom: 95px;
+}
+
+button {
+    color: #ebeef3;
+    font-size: 14px;
+    background-color: #55218d;
+    border-radius: 16px;
+    padding: 4px 8px;
+    border: 1px #55218d solid;
+    font-family: 'IRAN-CELL';
+}
+
+.back-text {
+    color: #744e9e;
+    size: 14px;
+    margin-top: 24px;
+    font-family: 'IRAN-CELL';
+}

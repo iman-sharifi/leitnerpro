@@ -1,0 +1,357 @@
+﻿@font-face {
+    font-family: IRAN-CELL;
+    src: url(../font/ایرانسل.TTF);
+}
+
+@font-face {
+    font-family: IRAN-CELL-BOLD;
+    src: url('../font/ایرانسل بلک .TTF');
+}
+
+@font-face {
+    font-family: IRAN-CELL-Regular;
+    src: url('../font/ایرانسل مدیوم .TTF');
+}
+
+@font-face {
+    font-family: IRAN-CELL-Light;
+    src: url('../font/ایرانسل لایت .OTF');
+}
+
+body {
+    margin: 0;
+    background-color: var(--pale-gray) !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+* {
+    font-family: IRAN-CELL;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+:root {
+    --purple: #55218d;
+    --purple-2: #8327EA;
+    --deep-lavender: #744e9e;
+    --orangish: #ff8345;
+    --pale-gray: #ebeef3;
+    --gray: #dbe2eb;
+    --black: #1e1e1e;
+    --greyish-brown: #444444;
+    --ice-blue: #f2f7ff;
+    --white: #fff;
+}
+
+.main-font {
+    font-family: IRAN-CELL-Regular;
+}
+
+.purple-2 {
+    color: var(--purple-2);
+}
+
+.font-18 {
+    font-size: 18px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.font-22 {
+    font-size: 22px;
+}
+
+.mtb-2 {
+    margin: 20px 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 72px 44px 56px;
+    padding: 0px 37px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 0px;
+        padding: 0px;
+    }
+}
+
+/* --------- header --------- */
+
+.header {
+    background-color: var(--purple);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 64px;
+    padding: 0px 37px;
+}
+
+.title-header {
+    font-size: 18px;
+    font-family: IRAN-CELL-BOLD;
+    color: var(--ice-blue);
+    padding-left: 18px;
+}
+
+.download-btn {
+    background-color: var(--orangish);
+    height: 28px;
+    width: 28px;
+    border-radius: 4px;
+    padding: 6px;
+    position: absolute;
+    right: 66px;
+    top: 16px;
+}
+
+.nav {
+    height: 38px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+    .nav > .nav-btn {
+        display: none;
+    }
+
+    .nav > .nav-links {
+        display: flex;
+        flex-direction: row-reverse !important;
+    }
+
+        .nav > .nav-links > a {
+            display: inline-block;
+            padding: 13px 22px 13px 10px;
+            text-decoration: none;
+            font-family: IRAN-CELL-Regular;
+        }
+
+    .nav > #nav-check {
+        display: none;
+    }
+
+    .nav > .nav-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+        .nav > .nav-btn > label {
+            padding: 22px;
+        }
+
+    .nav #nav-check:checked ~ .nav-btn > .menu-icon {
+        display: none !important;
+    }
+
+    .nav #nav-check:checked ~ .nav-btn > .close-icon {
+        display: block !important;
+        animation: menu-in 0.15s linear;
+        position: relative;
+        bottom: 7px;
+    }
+
+    .nav #nav-check:not(:checked) ~ .nav-btn > .menu-icon {
+        display: block !important;
+        animation: menu-out 0.2s;
+    }
+
+    .nav #nav-check:not(:checked) ~ .nav-btn > .close-icon {
+        display: none !important;
+    }
+
+@keyframes menu-in {
+    from {
+        opacity: 1;
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        opacity: 0;
+        transform: rotateZ(180deg);
+    }
+}
+
+@keyframes menu-out {
+    from {
+        opacity: 0;
+        transform: rotateZ(-70deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateZ(0deg);
+    }
+}
+
+.nav > .nav-btn > label:hover,
+.nav #nav-check:checked ~ .nav-btn > label {
+    background-color: var(--black-94);
+}
+
+.nav > .nav-btn > label > span {
+    display: block;
+    width: 19px;
+    height: 7px;
+    border-top: 2.5px solid #eee;
+}
+
+.nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-image: linear-gradient(110deg, var(--deep-lavender), var(--purple) 53%);
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    padding-left: 37px;
+    top: 58px;
+    left: 0px;
+}
+
+    .nav > .nav-links > a {
+        display: block;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        border-bottom: 1px solid rgba(233, 233, 233, 0.222);
+        ;
+        color: white !important;
+    }
+
+.nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+}
+
+.nav > #nav-check:checked ~ .nav-links {
+    height: 306px;
+    overflow-y: auto;
+}
+
+
+
+/*  ----------- footer ----------- */
+.footer {
+    background-image: url("../images/Footer\ bg.png");
+    width: 286px;
+    height: 929px;
+    padding: 32px 24px 25px;
+    margin-bottom: 37px;
+}
+
+.text-title-footer {
+    color: var(--ice-blue);
+    font-size: 20px;
+    font-family: IRAN-CELL-BOLD;
+}
+
+.title-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-footer {
+    margin-bottom: 32px;
+}
+
+.title-item-footer {
+    font-size: 20px;
+    color: var(--white);
+}
+
+.links-footer {
+    color: var(--ice-blue);
+    font-size: 16px;
+}
+
+.desc-footer {
+    font-size: 12px;
+    color: var(--pale-gray);
+    font-family: IRAN-CELL-Light;
+    opacity: 0.8;
+    text-align: center;
+    line-height: 1.67;
+}
+
+.icons-footer {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 24px;
+}
+
+
+/* ------- social content ------ */
+.title {
+    color: var(--purple);
+    font-size: 22px;
+    font-family: IRAN-CELL-Regular;
+    padding: 0px 44px;
+    text-align: center;
+}
+
+.circle {
+    width: 128px;
+    height: 128px;
+    margin: 56px 0 24px;
+    padding: 32px;
+    object-fit: contain;
+    background-color: var(--gray);
+    border-radius: 128px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-social-network {
+    text-align: center;
+    font-size: 16px;
+    color: var(--black);
+    margin-bottom: 16px;
+}
+
+.desc-social-network {
+    font-size: 14px;
+    text-align: center;
+    color: var(--greyish-brown);
+}
+
+.item-social-media {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*  ---- terms and conditions ------ */
+.description {
+    line-height: 2.29;
+    text-align: initial;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--greyish-brown);
+    margin: 0 24px;
+}
+
+.title-textDesc {
+    font-family: IRAN-CELL-BOLD;
+    margin-top: 40px;
+}
